@@ -9,8 +9,9 @@ public class Task implements Runnable {
     @Override
     public void run(){
         try {
-            log.info("Thread {} is going to sleep ", Thread.currentThread().getName());
+            log.info("Thread {} is executing task", Thread.currentThread().getName());
             Thread.sleep(1000);
+            log.info("Thread {} task execution complete", Thread.currentThread().getName());
         } catch (InterruptedException e) {
             log.error("Error : ", e);
         }
